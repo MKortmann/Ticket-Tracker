@@ -1,17 +1,25 @@
+<!-- https://www.npmjs.com/package/ng-sidebar -->
 <ng-sidebar-container>
   <!-- Sidebar -->
-  <ng-sidebar [opened]="status">
+  <ng-sidebar [opened]="status" mode="push">
     <h3>Hello Username</h3>
-    <button class="mb-3">New Ticket</button>
-    <button class="mb-3">Opened Tickets</button>
-    <button class="mb-3">Closed Tickets</button>
+    <hr />
+    <ul class="menu">
+      <li><a href="#">New Ticket</a></li>
+      <li><a href="#">Opened Tickets</a></li>
+      <li><a href="#">Closed Tickets</a></li>
+    </ul>
     <hr />
     <button class="mb-3" (click)="toggleSideBar()">Close Sidebar</button>
   </ng-sidebar>
   <!-- Page Contents -->
-  <div ng-sidebar-content>
+  <div ng-sidebar-content style="margin-left: 10px;">
     <button (click)="toggleSideBar()">
       Open Sidebar
     </button>
+
+    <!-- Page Body: router comes here -->
+    <h1>Welcome To Ticket-Tracker</h1>
+    <app-user-dashboard></app-user-dashboard>
   </div>
 </ng-sidebar-container>
