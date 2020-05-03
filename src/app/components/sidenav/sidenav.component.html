@@ -1,0 +1,17 @@
+<ng-sidebar-container>
+  <!-- Sidebar -->
+  <ng-sidebar [opened]="status">
+    <h3>Hello Username</h3>
+    <button class="mb-3">New Ticket</button>
+    <button class="mb-3">Opened Tickets</button>
+    <button class="mb-3">Closed Tickets</button>
+    <hr />
+    <button class="mb-3" (click)="toggleSideBar()">Close Sidebar</button>
+  </ng-sidebar>
+  <!-- Page Contents -->
+  <div ng-sidebar-content>
+    <button (click)="toggleSideBar()">
+      Open Sidebar
+    </button>
+  </div>
+</ng-sidebar-container>

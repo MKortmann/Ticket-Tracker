@@ -1,0 +1,21 @@
+ng-sidebar-container {
+  height: 100vh;
+}
+
+::ng-deep .ng-sidebar {
+  background-color: bisque;
+  width: 250px;
+  padding: 2em 3em;
+  box-shadow: 0 0 0.1em chocolate;
+}
+
+button {
+  margin-top: 3px;
+  width: 150px;
+}
+
+hr {
+  border: 1px solid black;
+  margin-left: 0;
+  margin-right: 0;
+}
